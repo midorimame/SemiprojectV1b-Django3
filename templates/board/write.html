@@ -2,6 +2,26 @@
 
 {% block title %} List {% endblock %}
 
+{% block style %}
+    #main {height: auto ;min-height: 500px;}
+{% endblock %}
+
 {% block content %}
-    
+    <h2>게시판 새글쓰기</h2>
+        <form name="boardfrm" method="post" action="board.do">
+            <table id="write">
+            <tr><th for="title">제목</th><td>
+                <input type="text" name="title" id="title"></td></tr>
+            <tr><th for="title">작성자</th><td>kseon</td></tr>
+            <tr><th for="contents">본문</th>
+                <td><textarea name="contents" id="contents"
+                rows="10" cols="50"
+                style="resize: none">
+                </textarea></td></tr>
+            <tr><td colspan="2">
+                <button type="submit">입력완료</button>
+                <button type="reset">다시입력</button></td>
+            </tr>
+            </table>
+        </form>
 {% endblock %}
