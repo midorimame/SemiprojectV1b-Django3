@@ -1,0 +1,72 @@
+hr {border: 2px solid black;}
+
+#main {height: auto ;min-height: 500px; margin-bottom:0px;}
+
+form{/* border:1px solid red; */
+    width: 350px;
+    margin: 150px auto;}
+.form1 div{ margin-bottom: 10px;}
+
+/* display - 인라인 요소를 블록 요소로 변경 */
+form label{ display:inline-block; width:120px;
+    text-align: right; font-weight: bold;}
+.form2 label{ display:inline-block; width:120px;
+    text-align: right; font-weight: bold;}
+
+form button:first-child {margin-left: 125px;}
+
+#wrap {/* border: 1px solid red; */ width: 1250px;}
+
+.link {list-style-type: none;float:left;
+    margin-left: 100px;
+    margin-right:60px; margin-bottom: 20px;}
+
+.link a:link {text-decoration: none; color:black;}
+.link a:hover{text-decoration: none; color:orange;}
+.link a:visited{text-decoration: none; color:black;}
+.link a:active{text-decoration: none; color:orange;}
+
+.copyright p {margin-left: 35%}
+
+
+
+/* board */
+#board {width:60%; border:1px solid black; border-collapse: collapse;
+        border-spacing: 10px;
+        margin: 0 20% 5%;}
+        th, td{border:1px solid black; padding:10px; text-align: center;}
+#board td:first-child, #board td:last-child {width:10%;}
+#board td:nth-child(3), #board td:nth-child(4) {width:15%;}
+#board td:nth-child(2) a:link, #pgnav th a:link{text-decoration: none; color:black;}
+#board td:nth-child(2) a:visited, #pgnav th a:visited{text-decoration: none; color:black;}
+#board td:nth-child(2) a:hover, #pgnav th a:hover{text-decoration: none; color:orange;}
+#board td:nth-child(2) a:active, #pgnav th a:active{text-decoration: none; color:orange;}
+
+#pgnav {width:50%; margin:0 25%;}
+
+#newone {width:100px; height:40px; margin-left: 72%; margin-bottom: 10px;}
+
+/* view */
+#view {width:60%; height:600px; border:none; border-collapse: collapse;
+        border-spacing: 20px;
+        margin: 0 20% 5%;}
+#view th {width:15%; text-align: left; vertical-align: top; border:none;}
+#view td {text-align: left; vertical-align: top;}
+#view td:first-child{border:none;}
+#view td:nth-child(2){border:none;}
+#view td:nth-child(3){border:none;}
+#view tr:nth-child(4) {height:200px; overflow: auto;}
+#view tr:nth-child(4) td:last-child {border: 1px solid #ffc403; }
+#view tr:nth-child(5) td {text-align: right; vertical-align: top;}
+
+/* myinfo */
+#info {margin: auto; width:100%; border:none; border-collapse: collapse;
+    border-spacing: 20px;}
+#info th {width:30%; text-align: right; margin-right: 10px; border:none;}
+#info td {text-align: left; border:none;}
+
+/* write */
+#write {margin: auto; width:150%; border-collapse: collapse; border-spacing: 20px;}
+#write th{width:20%; text-align: left; border:none; vertical-align: top;}
+#write td {text-align: left; border:none; vertical-align: top;}
+#write tr:last-child td{text-align: right;}
