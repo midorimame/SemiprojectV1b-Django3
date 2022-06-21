@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/css/bs5/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/normalize_reset.css' %}">
+    <style>
+        {% block style %}{% endblock %}
+    </style>
 </head>
 <body>
+    <div id="wrap">
+        {%  include 'layout/header.html' %}
+        <div id="main">
+            {% block content %}{% endblock %}
+        </div>  <!-- // main finish -->
+        {%  include 'layout/footer.html' %}
+    </div>  <!-- // wrap finish -->
 
+    {% block jscript %}{% endblock %}
+    <script src="{% static '/js/bs5/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
