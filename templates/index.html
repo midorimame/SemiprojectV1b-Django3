@@ -6,6 +6,9 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static '/css/bs5/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static '/css/webproject.css' %}">
+    <style>
+        {% block style %}{% endblock %}
+    </style>
 </head>
 <body>
     <div id="wrap">

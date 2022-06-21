@@ -2,6 +2,23 @@
 
 {% block title %} Myinfo {% endblock %}
 
+{% block style %}
+    #main {height: 500px}
+    header h1{ margin-bottom: 45px}
+    ul li {display:inline-block;}
+    footer span {display:block; text-align:center;}
+{% endblock %}
+
 {% block content %}
-    
+    <h2>회원정보</h2>
+    <form class="form2">
+        <div id="main">
+            <table id="info">
+                <tr><th>아이디</th><td>sietageek</td></tr>
+                <tr><th>이름</th><td>sietageek</td></tr>
+                <tr><th>이메일</th><td>sietageek</td></tr>
+                <tr><th>가입일</th><td>sietageek</td></tr>
+            </table>
+        </div>
+    </form>
 {% endblock %}
