@@ -10,14 +10,20 @@
 {% endblock %}
 
 {% block content %}
+{# 만약 로그인이 안 되어잇다면 회원정보 페이지는 보여지면 안 됨! #}
+{% if not request.session.userid %}
+    <script>
+        alert('회원전용 페이지입니다!');
+        location.href='/login';</script>
+{% endif %}
     <h2>회원정보</h2>
     <form class="form2">
         <div id="main">
             <table id="info">
-                <tr><th>아이디</th><td>sietageek</td></tr>
-                <tr><th>이름</th><td>sietageek</td></tr>
-                <tr><th>이메일</th><td>sietageek</td></tr>
-                <tr><th>가입일</th><td>sietageek</td></tr>
+                <tr><th>아이디</th><td>{{ member.userid }}</td></tr>
+                <tr><th>이름</th><td>{{ member.name }}</td></tr>
+                <tr><th>이메일</th><td>{{ member.email }}</td></tr>
+                <tr><th>가입일</th><td>{{ member.regdate }}</td></tr>
             </table>
         </div>
     </form>
