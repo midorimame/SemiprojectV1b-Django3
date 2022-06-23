@@ -1,3 +1,12 @@
+{# Django template language #}
+{# Django의 템플릿에 사용할 수 있는 특수한 언어 #}
+{# => 템플릿 변수, 템플릿 태그, 템플릿 필터, 템플릿 코멘트 #}
+{# 템플릿 변수: {{ 변수명 또는 객체명, 속성명 }} #}
+{# 템플릿 태그: {% 태그명 또는 코드명 %} #}
+{# 템플릿 필터: 변수의 값을 특정한 형식으로 변경 {{ 변수명|필터명 }} #}
+{# 템플릿 코멘트: {% comment %}여러줄 주석{% endcomment %} #}
+{#  #}
+
 {% extends 'index.html' %}
 
 {% block title %} Join {% endblock %}
@@ -5,7 +14,7 @@
 {% block content %}
     <h2>회원가입</h2>
         <form name="joinfrm" id="joinfrm" class="form1" method="post">
-            {# Django bulit in #}
+            {# Django bulit-in template filter #}
              <div style="color:red">{{ error|safe }}</div>
             {% csrf_token %}    {#  동일 출처origin 확인용 쿠키 생성 #}
             <div>

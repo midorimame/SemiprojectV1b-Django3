@@ -24,7 +24,7 @@ def join(request):
             error = '<li>비밀번호가 일치하지 않습니다!</li>'
         else:   # 입력한 회원정보를 Member 객체에 담음
             member = Member(
-                userid=form['userid'], passwd=make_password(form['passwd']), repasswd=form['repasswd']
+                userid=form['userid'], passwd=make_password(form['passwd'])
                 , name=form['name'], email=form['email']
             )
             # Member 객체에 담은 회원정보를 member테이블에 저장
