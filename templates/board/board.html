@@ -13,50 +13,12 @@
                 <th>작성일</th>
                 <th>조회</th>
             </tr>
+            {% for b in bds %}
             <tr>
-                <td>1</td><td><a href="/view?bno=1">시간은 금이라구, 친구! 진짜라구, 친구! 정말...</a></td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
+                <td>{{ b.id }}</td><td><a href="/view?bno={{ b.id }}">{{ b.title }}</a></td>
+                <td>{{ b.userid }}</td><td>{{ b.regdate|date:'Y-m-d' }}</td><td>{{ b.views }}</td>
             </tr>
-            <tr>
-                <td>2</td><td><a href="/view?bno=2">시간은 금이라구, 친구! 진짜라구, 친구! 정말...</a></td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
-            <tr>
-                <td>3</td><td><a href="/view?bno=3">시간은 금이라구, 친구! 진짜라구, 친구! 정말...</a></td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
-            <tr>
-                <td>4</td><td><a href="">시간은 금이라구, 친구! 진짜라구, 친구! 정말...</a></td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
-            <tr>
-                <td>5</td><td><a href="">시간은 금이라구, 친구! 진짜라구, 친구! 정말...</a></td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
-            <tr>
-                <td>6</td><td><a href="">시간은 금이라구, 친구! 진짜라구, 친구! 정말...</a></td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
-            <tr>
-                <td>7</td><td><a href="">시간은 금이라구, 친구! 진짜라구, 친구! 정말..</a></td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
-            <tr>
-                <td>8</td><td><a href="">시간은 금이라구, 친구! 진짜라구, 친구! 정말...</a></td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
-            <tr>
-                <td>9</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말...</td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
-            <tr>
-                <td>10</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말...</td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
-            <tr>
-                <td>11</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말...</td>
-                <td>kseon</td><td>2022-05-05</td><td>777</td>
-            </tr>
+            {% endfor %}
         </table>
         <table id="pgnav">
             <tr>
